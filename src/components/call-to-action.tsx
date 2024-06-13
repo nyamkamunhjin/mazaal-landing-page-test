@@ -8,7 +8,7 @@ interface IProps {}
 
 export const CallToAction: FC<IProps> = (props) => {
     return (
-        <div className="relative bg-gradient-to-bl from-primary/80 to-primary flex flex-col gap-6 items-center justify-center rounded-lg w-full">
+        <div className="relative bg-gradient-to-bl from-primary/80 to-primary flex flex-col gap-6 p-4 items-center justify-center rounded-lg w-full">
             <img
                 className="absolute opacity-10 w-[250px] -left-10"
                 src="/images/mazaal-logo-white.svg"
@@ -18,10 +18,10 @@ export const CallToAction: FC<IProps> = (props) => {
                 src="/images/mazaal-logo-white.svg"
             />
             <div className="max-w-xl flex flex-col items-center justify-center gap-6 my-28">
-                <h1 className="text-4xl font-bold max-w-lg text-center">
+                <h1 className="text-2xl md:text-4xl font-bold max-w-lg text-center">
                     Begin Your AI Journey Today
                 </h1>
-                <p className="text-lg font-light text-center">
+                <p className="text-base md:text-lg font-light text-center">
                     Start unlocking insights from your data today. Join the
                     community of businesses using Mazaal.ai. No prior coding
                     experience required!

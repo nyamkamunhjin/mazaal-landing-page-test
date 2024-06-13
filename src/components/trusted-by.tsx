@@ -23,7 +23,7 @@ export const TrustedBy: FC<IProps> = (props) => {
             <h6 className="text-black text-lg font-bold max-w-lg text-center">
                 Trusted by
             </h6>
-            <div className="grid grid-cols-3 place-content-center gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 place-content-center gap-4">
                 {items.map((each) => (
                     <div
                         className={`flex flex-col rounded-lg`}

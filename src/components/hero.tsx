@@ -29,7 +29,7 @@ export const Hero: FC<IProps> = (props) => {
                 </button>
                 <button className="text-gray-400">Book a Demo</button>
             </div>
-            <div className="relative w-full h-[350px] rounded-xl overflow-hidden">
+            <div className="relative w-full md:h-[350px] rounded-xl overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-b from-transparent to-white absolute" />
                 <img
                     className="w-full"
