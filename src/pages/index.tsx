@@ -15,7 +15,9 @@ export default function Home() {
     return (
         <main className={`w-full flex flex-col h-full`}>
             <Header />
-            <Hero />
+            <div className="m-24">
+                <Hero />
+            </div>
             <div className="w-full flex flex-col h-full px-4 bg-gradient-to-b from-white to-bg-tertiary/50">
                 <Workflow />
                 <Features />
