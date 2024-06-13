@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Bars3Icon, PlayIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { FC, useState } from 'react';
 
 interface IProps {}
@@ -28,9 +29,12 @@ export const Hero: FC<IProps> = (props) => {
                 </p>
             </div>
             <div className="flex gap-4 items-center">
-                <button className="px-4 py-2 bg-primary rounded text-sm">
+                <Link
+                    className="px-4 py-2 bg-primary rounded text-sm"
+                    href="https://beta.mazaal.ai/"
+                >
                     Get Started
-                </button>
+                </Link>
                 <button className="text-gray-400">Book a Demo</button>
             </div>
             <div

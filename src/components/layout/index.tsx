@@ -13,7 +13,7 @@ interface IProps {
 
 export const Layout: FC<IProps> = ({ children }) => {
     return (
-        <main className={`w-full flex flex-col h-screen`}>
+        <main className={`w-full flex flex-col min-h-screen`}>
             <Header />
             {children}
             <div className="max-w-screen-lg w-full mx-auto px-4 mt-auto">

@@ -41,14 +41,14 @@ export const UseCase: FC<IProps> = (props) => {
             <h1 className="text-black text-3xl font-bold max-w-lg text-center">
                 Empowering Industries Worldwide
             </h1>
-            <div className="flex flex-col lg:flex-row gap-6">
+            <div className="flex flex-wrap gap-6">
                 {items.map((each) => (
                     <div
-                        className={`flex flex-col gap-3 w-full lg:w-60 rounded-lg`}
+                        className={`flex flex-col gap-3 w-full md:w-52 rounded-lg`}
                         key={each.title}
                     >
                         <img
-                            className="w-full lg:w-60 lg:h-60 rounded-lg object-cover"
+                            className="w-full md:w-52 md:h-52 rounded-lg object-cover"
                             src={each.image}
                             alt={each.title}
                         />

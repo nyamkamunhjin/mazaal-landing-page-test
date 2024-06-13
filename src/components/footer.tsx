@@ -15,21 +15,23 @@ export const Footer: FC<IProps> = (props) => {
     return (
         <div className="m-10 py-10 border-t max-w-screen-lg mx-auto w-full flex flex-col-reverse md:flex-row gap-4">
             <div className="flex flex-col gap-8">
-                <Image
-                    src="/images/logo.png"
-                    width={160}
-                    height={50}
-                    // fill
-                    alt="Mazaal AI Logo"
-                />
+                <Link href="https://beta.mazaal.ai/">
+                    <Image
+                        src="/images/logo.png"
+                        width={160}
+                        height={50}
+                        // fill
+                        alt="Mazaal AI Logo"
+                    />
+                </Link>
                 <div className="flex gap-6 items-center">
-                    <Link href="#">
+                    <Link href="https://www.linkedin.com/company/mazaal-ai/">
                         <FaLinkedin className="fill-black w-6 h-6" />
                     </Link>
-                    <Link href="#">
+                    <Link href="https://x.com/Mazaal_AI">
                         <FaTwitter className="fill-black w-6 h-6" />
                     </Link>
-                    <Link href="#">
+                    <Link href="https://www.facebook.com/profile.php?id=100089427944001">
                         <FaFacebook className="fill-black w-6 h-6" />
                     </Link>
                 </div>
@@ -43,7 +45,10 @@ export const Footer: FC<IProps> = (props) => {
                     <Link className="text-gray-900" href="/pricing">
                         Pricing
                     </Link>
-                    <Link className="text-gray-900" href="/documentation">
+                    <Link
+                        className="text-gray-900"
+                        href="https://docs.mazaal.ai"
+                    >
                         Documentation
                     </Link>
                 </div>
@@ -52,7 +57,7 @@ export const Footer: FC<IProps> = (props) => {
                     <Link className="text-gray-400" href="#">
                         Resource Center
                     </Link>
-                    <Link className="text-gray-900" href="/blog">
+                    <Link className="text-gray-900" href="#">
                         Blog
                     </Link>
                 </div>

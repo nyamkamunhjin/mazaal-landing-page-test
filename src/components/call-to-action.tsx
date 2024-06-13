@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { FC } from 'react';
 
 interface IProps {}
@@ -27,9 +28,12 @@ export const CallToAction: FC<IProps> = (props) => {
                     experience required!
                 </p>
                 <div className="flex gap-4 items-center">
-                    <button className="px-4 py-2 font-medium text-primary bg-white rounded text-sm">
+                    <Link
+                        className="px-4 py-2 font-medium text-primary bg-white rounded text-sm"
+                        href="https://beta.mazaal.ai/"
+                    >
                         Try For Free
-                    </button>
+                    </Link>
                     <button className="text-sm font-light">Book a Demo</button>
                 </div>
             </div>
