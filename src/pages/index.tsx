@@ -8,13 +8,13 @@ import { UseCase } from '../components/use-case';
 import { TrustedBy } from '../components/trusted-by';
 import { CallToAction } from '../components/call-to-action';
 import { Footer } from '../components/footer';
+import { Layout } from '../components/layout';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function HomePage() {
     return (
-        <main className={`w-full flex flex-col h-full`}>
-            <Header />
+        <Layout>
             <div className="my-24">
                 <Hero />
             </div>
@@ -26,8 +26,7 @@ export default function Home() {
             <TrustedBy />
             <div className="max-w-screen-lg w-full mx-auto px-4">
                 <CallToAction />
-                <Footer />
             </div>
-        </main>
+        </Layout>
     );
 }
