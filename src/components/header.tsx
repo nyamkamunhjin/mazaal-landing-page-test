@@ -22,9 +22,9 @@ export const Header: FC<IProps> = (props) => {
                     alt="Mazaal AI Logo"
                 />
             </div>
-            <div className="flex mx-auto gap-4 text-base font-light">
+            <div className="hidden md:flex mx-auto gap-4 text-base font-light">
                 <Link href="/pricing">Pricing</Link>
-                <Link href="#">Documenation</Link>
+                <Link href="#">Documentation</Link>
                 <Link href="#">Blog</Link>
             </div>
             <button className="hidden md:flex px-4 py-2 bg-primary text-white rounded text-sm">

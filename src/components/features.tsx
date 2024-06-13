@@ -48,7 +48,7 @@ export const Features: FC<IProps> = (props) => {
             <h1 className="text-black text-3xl font-bold max-w-lg text-center">
                 Automate Your Business Process by Dragging This and That
             </h1>
-            <div className="grid grid-cols-6 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
                 {items.map((each) => (
                     <div
                         className={`flex flex-col rounded-lg bg-white ${each.className}`}
@@ -59,7 +59,7 @@ export const Features: FC<IProps> = (props) => {
                             <h3 className="text-text-primary font-semibold">
                                 {each.title}
                             </h3>
-                            <p className="text-text-secondary text-sm">
+                            <p className="text-text-tertiary">
                                 {each.description}
                             </p>
                         </div>

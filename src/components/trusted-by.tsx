@@ -20,7 +20,7 @@ const items = [
 export const TrustedBy: FC<IProps> = (props) => {
     return (
         <div className="px-10 py-6 flex flex-col gap-6 items-center h-18 max-w-7xl mx-auto">
-            <h6 className="text-black text-sm font-bold max-w-lg text-center">
+            <h6 className="text-black text-lg font-bold max-w-lg text-center">
                 Trusted by
             </h6>
             <div className="grid grid-cols-3 place-content-center gap-4">
@@ -30,7 +30,7 @@ export const TrustedBy: FC<IProps> = (props) => {
                         key={each.image}
                     >
                         <img
-                            className="h-28 object-contain"
+                            className="h-32 object-contain"
                             src={each.image}
                             alt="logo"
                         />

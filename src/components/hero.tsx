@@ -15,7 +15,7 @@ export const Hero: FC<IProps> = (props) => {
             <h1 className="text-5xl font-bold text-black text-center">
                 AI workflow for Everyday Efficiency
             </h1>
-            <p className="text-sm text-gray-400 text-center">
+            <p className="text-gray-400 text-center">
                 Empower your daily tasks with intuitive AI — customize, train,
                 and automate effortlessly, no coding required.
             </p>
@@ -25,7 +25,7 @@ export const Hero: FC<IProps> = (props) => {
                 </button>
                 <button className="text-gray-400">Book a Demo</button>
             </div>
-            <div className="relative rounded-lg overflow-hidden">
+            <div className="relative rounded-xl overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-b from-transparent to-white absolute" />
                 <Image
                     src="/images/hero.avif"

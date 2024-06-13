@@ -41,22 +41,22 @@ export const UseCase: FC<IProps> = (props) => {
             <h1 className="text-black text-3xl font-bold max-w-lg text-center">
                 Empowering Industries Worldwide
             </h1>
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-col lg:flex-row gap-6">
                 {items.map((each) => (
                     <div
-                        className={`flex flex-col gap-3 w-48 rounded-lg`}
+                        className={`flex flex-col gap-3 w-full lg:w-60 rounded-lg`}
                         key={each.title}
                     >
                         <img
-                            className="w-48 h-48 rounded-lg object-cover"
+                            className="w-full lg:w-60 lg:h-60 rounded-lg object-cover"
                             src={each.image}
                             alt={each.title}
                         />
                         <div className="flex flex-col gap-2">
-                            <h3 className="text-black font-semibold">
+                            <h3 className="text-black font-semibold text-xl lg:text-lg">
                                 {each.title}
                             </h3>
-                            <p className="text-gray-600 text-sm">
+                            <p className="text-gray-600 text-xl lg:text-base">
                                 {each.description}
                             </p>
                         </div>

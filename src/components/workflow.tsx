@@ -72,7 +72,7 @@ export const Workflow: FC<IProps> = (props) => {
             <div className="bg-gray-100 rounded-xl px-4 py-2 flex flex-wrap gap-2">
                 {cases.map((each) => (
                     <button
-                        className={`text-sm font-medium flex gap-2 items-center px-3 py-3 rounded-lg transition-all  ${
+                        className={`text-base font-medium flex gap-2 items-center px-3 py-3 rounded-lg transition-all  ${
                             active === each.name
                                 ? 'text-primary bg-white'
                                 : 'text-text-secondary'
