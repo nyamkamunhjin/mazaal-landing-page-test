@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { Bars3Icon, PlayIcon } from '@heroicons/react/24/solid';
-import Image from 'next/image';
+import { PlayIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import React, { FC, useState } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
 
 interface IProps {}
 
@@ -17,6 +17,12 @@ const videoLink =
 // guide on scroll animation https://www.freecodecamp.org/news/create-scroll-animations-with-framer-motion-and-react/
 export const Hero: FC<IProps> = (props) => {
     const [showVideo, setShowVideo] = useState(false);
+    const { scrollYProgress } = useScroll();
+
+    const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
+    const scale = useTransform(scrollYProgress, [0, 1], [1.05, 1]);
+    const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
     return (
         <div className="px-4 py-6 flex flex-col gap-10 max-w-5xl items-center h-18 mx-auto">
             <div className="flex flex-col gap-10 max-w-3xl">
@@ -37,7 +43,7 @@ export const Hero: FC<IProps> = (props) => {
                 </Link>
                 <button className="text-gray-400">Book a Demo</button>
             </div>
-            <div
+            <motion.div
                 className={`relative w-full md:h-[350px] rounded-xl overflow-hidden ${
                     !showVideo ? 'block' : 'hidden'
                 }`}
@@ -54,7 +60,7 @@ export const Hero: FC<IProps> = (props) => {
                 >
                     <PlayIcon className="w-4 h-4" /> Watch Mazaal AI Demo
                 </button>
-            </div>
+            </motion.div>
             <div
                 className={`${showVideo ? 'block' : 'hidden'}`}
                 style={{
