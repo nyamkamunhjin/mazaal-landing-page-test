@@ -45,7 +45,7 @@ export const Features: FC<IProps> = (props) => {
     return (
         <div className="md:px-10 py-6 flex flex-col gap-6 items-center h-18 max-w-7xl mx-auto">
             <span className="text-primary text-sm font-semibold">FEATURES</span>
-            <h1 className="text-black text-3xl font-bold max-w-lg text-center">
+            <h1 className="text-black text-3xl font-bold max-w-lg text-center font-mono">
                 Automate Your Business Process by Dragging This and That
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-6 gap-4">

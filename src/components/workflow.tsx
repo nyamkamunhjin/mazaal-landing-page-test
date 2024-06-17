@@ -157,7 +157,7 @@ export const Workflow: FC<IProps> = (props) => {
     );
     return (
         <div className="md:px-10 py-6 flex flex-col gap-4 items-center h-18 max-w-7xl mx-auto">
-            <h1 className="text-black text-3xl font-bold">
+            <h1 className="text-black text-3xl font-bold font-mono">
                 Build AI Enabled Workflow For Every Use Case
             </h1>
             <div className="bg-gray-100 rounded-xl px-4 py-2 flex flex-wrap flex-1 justify-center gap-2">

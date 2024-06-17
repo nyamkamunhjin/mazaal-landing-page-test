@@ -26,7 +26,7 @@ export const Hero: FC<IProps> = (props) => {
     return (
         <div className="px-4 py-6 flex flex-col gap-10 max-w-5xl items-center h-18 mx-auto">
             <div className="flex flex-col gap-10 max-w-3xl">
-                <h1 className="text-6xl font-bold text-black text-center">
+                <h1 className="text-6xl font-bold text-black text-center font-mono">
                     AI workflow for Everyday Efficiency
                 </h1>
                 <p className="text-gray-400 text-center text-lg">

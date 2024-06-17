@@ -8,6 +8,10 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['var(--font-geist-sans)'],
+                mono: ['var(--my-font)'],
+            },
             colors: {
                 primary: '#FF6A2A',
                 secondary: '#440a0699',

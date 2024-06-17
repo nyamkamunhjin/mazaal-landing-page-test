@@ -38,15 +38,15 @@ export const WorkflowCard: FC<WorkflowCardProps> = ({
     item3,
 }) => {
     return (
-        <div className="relative grid grid-cols-3 place-content-center gap-16 items-center min-w-[1200px] w-full text-black p-4">
-            <div className="absolute grid w-full py-16 px-48 h-full">
+        <div className="relative grid grid-cols-1 xl:grid-cols-3 place-content-center gap-16 items-center xl:min-w-[1200px] w-full text-black p-4">
+            <div className="absolute xl:grid w-full py-16 px-48 h-full">
                 <div className="w-full h-full flex">
-                    <div className="w-full h-2/3 border-t border-x rounded-tl-xl"></div>
-                    <div className="w-full h-2/3 border-t border-r rounded-xl"></div>
+                    <div className="w-full xl:h-2/3 border-r xl:border-t xl:border-x rounded-tl-xl"></div>
+                    <div className="w-full xl:h-2/3 xl:border-t xl:border-r rounded-xl"></div>
                 </div>
             </div>
 
-            <div className="col-span-3 flex justify-center w-full">
+            <div className="col-span-1 xl:col-span-3 flex justify-center w-full">
                 <div className="w-72 flex items-center gap-2 border p-4 rounded-xl h-full justify-evenly z-10 bg-white">
                     <img
                         className="w-24 rounded-full"
@@ -64,7 +64,7 @@ export const WorkflowCard: FC<WorkflowCardProps> = ({
                 </div>
             </div>
 
-            <div className="mx-auto flex flex-col gap-4 w-60 h-60 bg-white -mt-40 z-10">
+            <div className="mx-auto flex flex-col gap-4 w-60 h-60 bg-white xl:-mt-40 z-10">
                 <div className="flex items-center border p-4 rounded-xl mx-auto justify-evenly">
                     {item1.icon}
                 </div>
@@ -92,7 +92,7 @@ export const WorkflowCard: FC<WorkflowCardProps> = ({
                 </div>
             </div>
 
-            <div className="mx-auto flex flex-col gap-4 w-60 h-60 bg-white -mt-40 z-10">
+            <div className="mx-auto flex flex-col gap-4 w-60 h-60 bg-white xl:-mt-40 z-10">
                 <div className="flex items-center border p-4 rounded-xl mx-auto justify-evenly">
                     {item3.icon}
                 </div>

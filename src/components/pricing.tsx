@@ -6,8 +6,7 @@ import {
     BuildingOfficeIcon,
     FlagIcon,
 } from '@heroicons/react/24/outline';
-import { Bars3Icon } from '@heroicons/react/24/solid';
-import Image from 'next/image';
+import Link from 'next/link';
 import React, { FC } from 'react';
 
 interface IProps {}
@@ -61,7 +60,7 @@ export const Pricing: FC<IProps> = (props) => {
                 <span className="text-primary text-start text-sm font-semibold">
                     CHOOSE YOUR PATH TO AI SUCCESS
                 </span>
-                <h1 className="text-black text-3xl font-bold max-w-lg text-start">
+                <h1 className="text-black text-3xl font-bold max-w-lg text-start font-mono">
                     Flexible Plans for Every Business Need
                 </h1>
                 <p className="text-gray-500">
@@ -94,9 +93,12 @@ export const Pricing: FC<IProps> = (props) => {
                             <p className="text-black text-3xl font-medium">
                                 {each.price}
                             </p>
-                            <button className="px-4 py-2 bg-primary text-white rounded text-sm w-full">
+                            <Link
+                                href="https://beta.mazaal.ai"
+                                className="px-4 py-2 bg-primary text-white rounded text-sm w-full"
+                            >
                                 Get started
-                            </button>
+                            </Link>
                         </div>
                         <div className="flex flex-col gap-3 border-t mt-5 py-5">
                             <span className="text-black text-xs font-medium mb-">
