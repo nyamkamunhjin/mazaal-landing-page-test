@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
 import React, { FC } from 'react';
 import { BsMegaphoneFill } from 'react-icons/bs';
 import { FaFile, FaLightbulb } from 'react-icons/fa';
@@ -48,8 +49,10 @@ export const WorkflowCard: FC<WorkflowCardProps> = ({
 
             <div className="col-span-1 xl:col-span-3 flex justify-center w-full">
                 <div className="w-72 flex items-center gap-2 border p-4 rounded-xl h-full justify-evenly z-10 bg-white">
-                    <img
+                    <Image
                         className="w-24 rounded-full"
+                        width={96}
+                        height={96}
                         src={person.avatar}
                         alt="avatar"
                     />

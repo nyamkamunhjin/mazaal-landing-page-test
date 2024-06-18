@@ -10,12 +10,18 @@ interface IProps {}
 export const CallToAction: FC<IProps> = (props) => {
     return (
         <div className="relative bg-gradient-to-bl from-primary/80 to-primary flex flex-col gap-6 p-4 items-center justify-center rounded-lg w-full">
-            <img
-                className="absolute opacity-10 w-[250px] -left-10"
+            <Image
+                className="absolute opacity-10 -left-10"
+                width={250}
+                height={250}
+                alt="Mazaal logo"
                 src="/images/mazaal-logo-white.svg"
             />
-            <img
-                className="absolute opacity-10 w-[250px] -right-10 rotate-180"
+            <Image
+                className="absolute opacity-10 -right-10 rotate-180"
+                width={250}
+                height={250}
+                alt="Mazaal logo"
                 src="/images/mazaal-logo-white.svg"
             />
             <div className="max-w-xl flex flex-col items-center justify-center gap-6 my-28">

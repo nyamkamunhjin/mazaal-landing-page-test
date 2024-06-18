@@ -54,7 +54,12 @@ export const Features: FC<IProps> = (props) => {
                         className={`flex flex-col rounded-lg bg-white ${each.className}`}
                         key={each.title}
                     >
-                        <img src={each.image} alt={each.title} />
+                        <Image
+                            src={each.image}
+                            alt={each.title}
+                            width={592}
+                            height={264}
+                        />
                         <div className="flex flex-col gap-2 p-4">
                             <h3 className="text-text-primary font-semibold">
                                 {each.title}

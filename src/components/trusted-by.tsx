@@ -23,18 +23,16 @@ export const TrustedBy: FC<IProps> = (props) => {
             <h6 className="text-black text-lg font-bold max-w-lg text-center">
                 Trusted by
             </h6>
-            <div className="grid grid-cols-1 md:grid-cols-3 place-content-center gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 place-content-center gap-12">
                 {items.map((each) => (
-                    <div
-                        className={`flex flex-col rounded-lg`}
+                    <Image
                         key={each.image}
-                    >
-                        <img
-                            className="h-32 object-contain"
-                            src={each.image}
-                            alt="logo"
-                        />
-                    </div>
+                        className="object-contain m-auto"
+                        width={160}
+                        height={160}
+                        src={each.image}
+                        alt="logo"
+                    />
                 ))}
             </div>
         </div>

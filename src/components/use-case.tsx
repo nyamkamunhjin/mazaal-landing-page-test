@@ -47,8 +47,10 @@ export const UseCase: FC<IProps> = (props) => {
                         className={`flex flex-col gap-3 w-full md:w-52 rounded-lg`}
                         key={each.title}
                     >
-                        <img
+                        <Image
                             className="w-full md:w-52 md:h-52 rounded-lg object-cover"
+                            width={208}
+                            height={208}
                             src={each.image}
                             alt={each.title}
                         />
