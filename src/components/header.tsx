@@ -10,7 +10,7 @@ interface IProps {}
  * @function @Header
  **/
 
-export const Header: FC<IProps> = (props) => {
+export const Header: FC<IProps> = () => {
     const [opened, setOpened] = useState(false);
     return (
         <>

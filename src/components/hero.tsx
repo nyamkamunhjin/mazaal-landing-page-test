@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import { PlayIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import React, { FC, useState } from 'react';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 interface IProps {}
@@ -12,17 +11,9 @@ interface IProps {}
  * @function @Header
  **/
 
-const videoLink =
-    'https://www.loom.com/share/659fc31e5ebf4ed8bc6bbfc7669eb7e3?sid=3e8cea2a-89f8-4d44-a0af-e1025e2413cc';
-
 // guide on scroll animation https://www.freecodecamp.org/news/create-scroll-animations-with-framer-motion-and-react/
-export const Hero: FC<IProps> = (props) => {
+export const Hero: FC<IProps> = () => {
     const [showVideo, setShowVideo] = useState(false);
-    const { scrollYProgress } = useScroll();
-
-    const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
-    const scale = useTransform(scrollYProgress, [0, 1], [1.05, 1]);
-    const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
         <div className="px-4 py-6 flex flex-col gap-10 max-w-5xl items-center h-18 mx-auto">

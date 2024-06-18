@@ -1,4 +1,3 @@
-import { Bars3Icon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC } from 'react';
@@ -11,7 +10,7 @@ interface IProps {}
  * @function @Footer
  **/
 
-export const Footer: FC<IProps> = (props) => {
+export const Footer: FC<IProps> = () => {
     return (
         <div className="m-10 py-10 border-t max-w-screen-lg mx-auto w-full flex flex-col-reverse md:flex-row gap-4">
             <div className="flex flex-col gap-8">

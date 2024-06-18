@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google';
 import { Workflow } from '../components/workflow';
 import { Features } from '../components/features';
 import { Hero } from '../components/hero';

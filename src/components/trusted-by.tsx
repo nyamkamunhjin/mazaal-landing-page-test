@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import { Bars3Icon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import React, { FC } from 'react';
 
@@ -17,7 +15,7 @@ const items = [
     },
 ];
 
-export const TrustedBy: FC<IProps> = (props) => {
+export const TrustedBy: FC<IProps> = () => {
     return (
         <div className="px-10 py-6 flex flex-col gap-6 items-center h-18 max-w-7xl mx-auto">
             <h6 className="text-black text-lg font-bold max-w-lg text-center">

@@ -1,9 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import {
-    EnvelopeIcon,
     MegaphoneIcon,
     PhoneIcon,
-    PhotoIcon,
     PresentationChartBarIcon,
     ShoppingBagIcon,
 } from '@heroicons/react/24/outline';
@@ -13,14 +10,13 @@ import {
     CurrencyDollarIcon,
 } from '@heroicons/react/24/outline';
 import React, { FC, useState } from 'react';
-import { BsMegaphone, BsMegaphoneFill } from 'react-icons/bs';
+import { BsMegaphoneFill } from 'react-icons/bs';
 import {
     FaCalculator,
     FaChartArea,
     FaFile,
     FaHandshake,
     FaLightbulb,
-    FaMegaport,
 } from 'react-icons/fa';
 import { WorkflowCard, WorkflowCardProps } from './workflow-card';
 import { FaPlugCirclePlus, FaWandMagicSparkles } from 'react-icons/fa6';
@@ -151,7 +147,7 @@ const cases = [
     },
 ];
 
-export const Workflow: FC<IProps> = (props) => {
+export const Workflow: FC<IProps> = () => {
     const [active, setActive] = useState(
         cases.find((each) => each.name === 'Marketing')
     );

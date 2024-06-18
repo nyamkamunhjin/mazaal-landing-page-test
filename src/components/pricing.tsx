@@ -53,7 +53,7 @@ const items = [
     },
 ];
 
-export const Pricing: FC<IProps> = (props) => {
+export const Pricing: FC<IProps> = () => {
     return (
         <div className="md:px-10 py-6 flex flex-col gap-6 items-center h-18 w-full max-w-screen-lg mx-auto p-4">
             <div className="flex flex-col gap-4 items-start max-w-xl mr-auto mb-6">

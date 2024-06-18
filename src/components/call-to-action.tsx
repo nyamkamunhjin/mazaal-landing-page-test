@@ -1,13 +1,10 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
-import { Bars3Icon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC } from 'react';
 
 interface IProps {}
 
-export const CallToAction: FC<IProps> = (props) => {
+export const CallToAction: FC<IProps> = () => {
     return (
         <div className="relative bg-gradient-to-bl from-primary/80 to-primary flex flex-col gap-6 p-4 items-center justify-center rounded-lg w-full">
             <Image
