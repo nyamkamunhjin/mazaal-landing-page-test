@@ -45,6 +45,7 @@ export const Hero: FC<IProps> = () => {
                     <Image
                         width={992}
                         height={350}
+                        priority
                         src="/images/hero.avif"
                         alt="Mazaal Demo Video"
                     />
