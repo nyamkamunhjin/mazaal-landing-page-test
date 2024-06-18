@@ -24,13 +24,26 @@ export const Footer: FC<IProps> = () => {
                     />
                 </Link>
                 <div className="flex gap-6 items-center">
-                    <Link href="https://www.linkedin.com/company/mazaal-ai/">
+                    <Link
+                        id="linkedin"
+                        href="https://www.linkedin.com/company/mazaal-ai/"
+                        aria-label="Explore more on linkedin"
+                    >
                         <FaLinkedin className="fill-black w-6 h-6" />
                     </Link>
-                    <Link href="https://x.com/Mazaal_AI">
+
+                    <Link
+                        id="twitter"
+                        href="https://x.com/Mazaal_AI"
+                        aria-label="Explore more on twitter"
+                    >
                         <FaTwitter className="fill-black w-6 h-6" />
                     </Link>
-                    <Link href="https://www.facebook.com/profile.php?id=100089427944001">
+                    <Link
+                        id="facebook"
+                        href="https://www.facebook.com/profile.php?id=100089427944001"
+                        aria-label="Explore more on facebook"
+                    >
                         <FaFacebook className="fill-black w-6 h-6" />
                     </Link>
                 </div>

@@ -36,6 +36,7 @@ export const Header: FC<IProps> = () => {
                     Get Started
                 </Link>
                 <button
+                    title="Menu opener"
                     className="ml-auto md:hidden"
                     onClick={() => setOpened((prev) => !prev)}
                 >

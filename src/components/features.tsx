@@ -59,9 +59,9 @@ export const Features: FC<IProps> = () => {
                             height={264}
                         />
                         <div className="flex flex-col gap-2 p-4">
-                            <h3 className="text-text-primary font-semibold">
+                            <h1 className="text-text-primary font-semibold">
                                 {each.title}
-                            </h3>
+                            </h1>
                             <p className="text-text-tertiary">
                                 {each.description}
                             </p>

@@ -87,9 +87,9 @@ export const Pricing: FC<IProps> = () => {
                         ) : null}
                         <div className="flex flex-col gap-4 border-b">
                             {each.icon}
-                            <h3 className="text-black text-lg font-semibold">
+                            <h1 className="text-black text-lg font-semibold">
                                 {each.title}
-                            </h3>
+                            </h1>
                             <p className="text-black text-3xl font-medium">
                                 {each.price}
                             </p>

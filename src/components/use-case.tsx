@@ -53,9 +53,9 @@ export const UseCase: FC<IProps> = () => {
                             alt={each.title}
                         />
                         <div className="flex flex-col gap-2">
-                            <h3 className="text-black font-semibold text-xl lg:text-lg">
+                            <h1 className="text-black font-semibold text-xl lg:text-lg">
                                 {each.title}
-                            </h3>
+                            </h1>
                             <p className="text-gray-600 text-xl lg:text-base">
                                 {each.description}
                             </p>
