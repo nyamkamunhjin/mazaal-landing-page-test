@@ -18,10 +18,10 @@ export const Hero: FC<IProps> = () => {
     return (
         <div className="px-4 py-6 flex flex-col gap-10 max-w-5xl items-center h-18 mx-auto">
             <div className="flex flex-col gap-10 max-w-3xl">
-                <h1 className="text-5xl font-bold text-black text-center font-mono ">
+                <h1 className="text-5xl font-bold text-black text-center font-mono tracking-wide">
                     AI workflow for Everyday Efficiency
                 </h1>
-                <p className="text-gray-400 text-center text-lg">
+                <p className="text-gray-400 text-center text-base">
                     Empower your daily tasks with intuitive AI — customize,
                     train, and automate effortlessly, no coding required.
                 </p>
