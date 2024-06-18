@@ -22,7 +22,7 @@ export const CallToAction: FC<IProps> = () => {
                 src="/images/mazaal-logo-white.svg"
             />
             <div className="max-w-xl flex flex-col items-center justify-center gap-6 my-28">
-                <h1 className="text-2xl md:text-4xl font-bold max-w-lg text-center font-mono tracking-wide">
+                <h1 className="text-2xl md:text-4xl font-medium max-w-lg text-center font-mono">
                     Begin Your AI Journey Today
                 </h1>
                 <p className="text-base font-light text-center">

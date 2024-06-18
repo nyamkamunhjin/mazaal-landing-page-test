@@ -60,7 +60,7 @@ export const Pricing: FC<IProps> = () => {
                 <span className="text-primary text-start text-sm font-semibold">
                     CHOOSE YOUR PATH TO AI SUCCESS
                 </span>
-                <h1 className="text-black text-3xl font-bold max-w-lg text-start font-mono">
+                <h1 className="text-black text-3xl font-medium max-w-lg text-start font-mono">
                     Flexible Plans for Every Business Need
                 </h1>
                 <p className="text-gray-500">

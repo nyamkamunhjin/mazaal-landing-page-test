@@ -36,7 +36,7 @@ export const UseCase: FC<IProps> = () => {
             <span className="text-primary text-sm font-semibold">
                 DISCOVER ENDLESS USE CASES
             </span>
-            <h1 className="text-black text-3xl font-bold max-w-lg text-center font-mono tracking-wide">
+            <h1 className="text-black text-3xl font-medium max-w-lg text-center font-mono tracking-wide">
                 Empowering Industries Worldwide
             </h1>
             <div className="flex flex-wrap gap-6">
