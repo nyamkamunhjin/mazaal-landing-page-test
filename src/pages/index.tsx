@@ -1,20 +1,24 @@
-import Image from 'next/image';
 import { Inter } from 'next/font/google';
-import { Header } from '../components/header';
 import { Workflow } from '../components/workflow';
 import { Features } from '../components/features';
 import { Hero } from '../components/hero';
 import { UseCase } from '../components/use-case';
 import { TrustedBy } from '../components/trusted-by';
 import { CallToAction } from '../components/call-to-action';
-import { Footer } from '../components/footer';
 import { Layout } from '../components/layout';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function HomePage() {
     return (
-        <Layout>
+        <Layout
+            meta={{
+                title: 'Mazaal AI: End to End No-Code AI Platform',
+                description:
+                    'Experience the transformative power of AI with Mazaal. Our no-code platform offers a simple, affordable way to leverage AI for your business.',
+                image: `${process.env.URL}/mazaal-screen-image.jpeg`,
+                url: `${process.env.URL}`,
+                keywords: 'ai, automation, business, easy',
+            }}
+        >
             <div className="my-24">
                 <Hero />
             </div>
