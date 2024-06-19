@@ -10,17 +10,33 @@ import {
     CurrencyDollarIcon,
 } from '@heroicons/react/24/outline';
 import React, { FC, useState } from 'react';
-import { BsMegaphoneFill } from 'react-icons/bs';
+import { BsDatabaseExclamation, BsMegaphoneFill } from 'react-icons/bs';
 import {
+    FaBook,
     FaCalculator,
     FaChartArea,
+    FaCode,
     FaFile,
     FaHandshake,
     FaLightbulb,
+    FaMask,
+    FaRegChartBar,
+    FaRobot,
 } from 'react-icons/fa';
 import { WorkflowCard, WorkflowCardProps } from './workflow-card';
-import { FaPlugCirclePlus, FaWandMagicSparkles } from 'react-icons/fa6';
+import {
+    FaCodeCompare,
+    FaHandshakeSimple,
+    FaMagnifyingGlass,
+    FaPeopleGroup,
+    FaPlugCirclePlus,
+    FaTicket,
+    FaWandMagicSparkles,
+} from 'react-icons/fa6';
 import { LuPackageCheck } from 'react-icons/lu';
+import { BiPieChart, BiTestTube } from 'react-icons/bi';
+import { IoDocument } from 'react-icons/io5';
+import { GiReceiveMoney } from 'react-icons/gi';
 
 interface IProps {}
 
@@ -126,24 +142,156 @@ const cases = [
         } as WorkflowCardProps,
     },
     {
-        name: 'Tech',
+        name: 'IT',
         icon: <CodeBracketIcon className="w-5 h-5" />,
-        disabled: true,
+        disabled: false,
+        meta: {
+            person: {
+                name: 'Ethan Thompson',
+                avatar: '/static/avatars/014m.jpg',
+                profession: 'Lead Engineer',
+            },
+            item1: {
+                title: 'Automated Incident Response',
+                description:
+                    'Deploy AI to detect and respond to IT incidents in real-time.',
+                icon: (
+                    <BsDatabaseExclamation className="w-10 h-10 text-primary" />
+                ),
+            },
+            item2: {
+                title: 'Cybersecurity Threat Detection',
+                description:
+                    'Use deep learning models to identify and mitigate potential security threats.',
+                icon: <FaCode className="w-10 h-10 text-primary" />,
+            },
+            item3: {
+                title: 'Legacy System Integration',
+                description:
+                    'Facilitate the integration of legacy systems with modern applications through AI-enabled connectors.',
+                icon: <FaCodeCompare className="w-10 h-10 text-primary" />,
+            },
+        } as WorkflowCardProps,
+    },
+    {
+        name: 'HR',
+        icon: <CurrencyDollarIcon className="w-5 h-5" />,
+        disabled: false,
+        meta: {
+            person: {
+                name: 'Liam Kennedy',
+                avatar: '/static/avatars/009m.jpg',
+                profession: 'HR Manager',
+            },
+            item1: {
+                title: 'AI-Driven Recruitment',
+                description:
+                    'Automate candidate sourcing and screening with AI to identify the best talent.',
+                icon: <FaPeopleGroup className="w-10 h-10 text-primary" />,
+            },
+            item2: {
+                title: 'Employee Onboarding',
+                description:
+                    'Use AI workflows to streamline the onboarding process and personalize the experience for new hires.',
+                icon: <FaHandshakeSimple className="w-10 h-10 text-primary" />,
+            },
+            item3: {
+                title: 'Performance Management',
+                description:
+                    'Implement AI tools for monitoring employee performance and providing actionable insights.',
+                icon: <FaRegChartBar className="w-10 h-10 text-primary" />,
+            },
+        } as WorkflowCardProps,
     },
     {
         name: 'Finance',
-        icon: <CurrencyDollarIcon className="w-5 h-5" />,
-        disabled: true,
+        icon: <PhoneIcon className="w-5 h-5" />,
+        disabled: false,
+        meta: {
+            person: {
+                name: 'Oliver Brown',
+                avatar: '/static/avatars/010m.jpg',
+                profession: 'Financial Manager',
+            },
+            item1: {
+                title: 'Automated Financial Reporting',
+                description:
+                    'Generate financial reports and insights using AI without manual data entry.',
+                icon: <IoDocument className="w-10 h-10 text-primary" />,
+            },
+            item2: {
+                title: 'Fraud Detection',
+                description:
+                    'Apply deep learning algorithms to detect and prevent fraudulent activities in real-time.',
+                icon: <FaMask className="w-10 h-10 text-primary" />,
+            },
+            item3: {
+                title: 'Cash Flow Forecasting',
+                description:
+                    'Use predictive analytics to forecast cash flow and make informed financial decisions.',
+                icon: <GiReceiveMoney className="w-10 h-10 text-primary" />,
+            },
+        } as WorkflowCardProps,
     },
     {
         name: 'Support',
         icon: <PhoneIcon className="w-5 h-5" />,
-        disabled: true,
+        disabled: false,
+        meta: {
+            person: {
+                name: 'Liam Kennedy',
+                avatar: '/static/avatars/011m.jpg',
+                profession: 'Support Specialist',
+            },
+            item1: {
+                title: 'Intelligent Customer Service Bots',
+                description:
+                    'Deploy AI chatbots to provide instant support and resolve common customer queries.',
+                icon: <FaRobot className="w-10 h-10 text-primary" />,
+            },
+            item2: {
+                title: 'Ticket Routing and Prioritization',
+                description:
+                    'Use AI to automatically route support tickets to the appropriate team and prioritize them based on urgency.',
+                icon: <FaTicket className="w-10 h-10 text-primary" />,
+            },
+            item3: {
+                title: 'Knowledge Base Automation',
+                description:
+                    'Create and update knowledge base articles using AI to ensure accurate and up-to-date support information.',
+                icon: <FaBook className="w-10 h-10 text-primary" />,
+            },
+        } as WorkflowCardProps,
     },
     {
-        name: 'Product',
+        name: 'Product Development',
         icon: <ShoppingBagIcon className="w-5 h-5" />,
-        disabled: true,
+        disabled: false,
+        meta: {
+            person: {
+                name: 'Caleb Martin',
+                avatar: '/static/avatars/008f.jpg',
+                profession: 'Product Manager',
+            },
+            item1: {
+                title: 'User Experience Analysis',
+                description:
+                    'Leverage AI to analyze user interactions and improve product design and functionality.',
+                icon: <FaMagnifyingGlass className="w-10 h-10 text-primary" />,
+            },
+            item2: {
+                title: 'Feature Prioritization',
+                description:
+                    'Use AI to predict which product features will drive the most value for users.',
+                icon: <FaCodeCompare className="w-10 h-10 text-primary" />,
+            },
+            item3: {
+                title: 'Automated Testing',
+                description:
+                    'Implement AI-driven testing tools to identify bugs and issues before product release.',
+                icon: <BiTestTube className="w-10 h-10 text-primary" />,
+            },
+        } as WorkflowCardProps,
     },
 ];
 
