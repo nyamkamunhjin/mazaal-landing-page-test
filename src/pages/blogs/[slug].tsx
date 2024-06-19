@@ -10,10 +10,11 @@ interface IProps {
  * @function @Blog
  **/
 
-export const Blog: NextPage<IProps> = ({ post }) => {
-    return <div>{post}</div>;
+const Blog: NextPage<IProps> = ({ post }) => {
+    return <div className="text-black">{post}</div>;
 };
 
+export default Blog;
 // This function gets called at build time on server-side.
 // It may be called again, on a serverless function, if
 // the path has not been generated.
@@ -25,12 +26,14 @@ export async function getStaticPaths() {
     });
     const { data: posts } = await res.json();
 
+    console.dir({ posts }, { depth: null });
+
     // Get the paths we want to pre-render based on posts
     const paths = posts.map((post: any) => ({
-        params: { slug: post.slug },
+        params: { slug: post.attributes.slug },
     }));
 
-    console.log({ paths });
+    console.dir({ paths }, { depth: null });
 
     // We'll pre-render only these paths at build time.
     // { fallback: 'blocking' } will server-render pages
