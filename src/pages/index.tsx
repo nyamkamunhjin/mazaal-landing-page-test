@@ -18,16 +18,16 @@ export default function HomePage() {
                 keywords: 'ai, automation, business, easy',
             }}
         >
-            <div className="my-24">
+            <div className="tw-my-24">
                 <Hero />
             </div>
-            <div className="w-full flex flex-col h-full px-4 bg-gradient-to-b from-white to-bg-tertiary/50">
+            <div className=" tw-w-full tw-flex tw-flex-col tw-h-full tw-px-4 tw-bg-gradient-to-b tw-from-white tw-to-bg-tertiary/50">
                 <Workflow />
                 <Features />
             </div>
             <UseCase />
             <TrustedBy />
-            <div className="max-w-screen-lg w-full mx-auto px-4">
+            <div className=" tw-max-w-screen-lg tw-w-full tw-mx-auto tw-px-4">
                 <CallToAction />
             </div>
         </Layout>

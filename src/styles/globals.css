@@ -43,11 +43,11 @@ body {
         all: revert !important;
     }
 
-    @apply tw-text-sm;
+    /* @apply tw-text-base; */
 
     pre {
         /* all: revert; */
-        @apply tw-bg-gray-100 tw-p-4 tw-rounded-lg;
+        @apply tw-bg-gray-100 tw-p-4 tw-rounded-lg tw-overflow-auto;
     }
 
     code {

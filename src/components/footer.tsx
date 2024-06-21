@@ -12,7 +12,7 @@ interface IProps {}
 
 export const Footer: FC<IProps> = () => {
     return (
-        <div className=" tw-m-10 tw-py-10 tw-border-t tw-max-w-screen-lg tw-mx-auto tw-w-full tw-flex tw-flex-col-reverse md:tw-flex-row tw-gap-4">
+        <div className=" tw-m-10 tw-py-10 tw-px-4 tw-border-t tw-max-w-screen-lg tw-mx-auto tw-w-full tw-flex tw-flex-col-reverse md:tw-flex-row tw-gap-4">
             <div className=" tw-flex tw-flex-col tw-gap-8">
                 <Link href="https://beta.mazaal.ai/">
                     <Image
