@@ -12,8 +12,8 @@ interface IProps {}
 
 export const Footer: FC<IProps> = () => {
     return (
-        <div className="m-10 py-10 border-t max-w-screen-lg mx-auto w-full flex flex-col-reverse md:flex-row gap-4">
-            <div className="flex flex-col gap-8">
+        <div className=" tw-m-10 tw-py-10 tw-border-t tw-max-w-screen-lg tw-mx-auto tw-w-full tw-flex tw-flex-col-reverse md:tw-flex-row tw-gap-4">
+            <div className=" tw-flex tw-flex-col tw-gap-8">
                 <Link href="https://beta.mazaal.ai/">
                     <Image
                         src="/images/logo.png"
@@ -23,13 +23,13 @@ export const Footer: FC<IProps> = () => {
                         alt="Mazaal AI Logo"
                     />
                 </Link>
-                <div className="flex gap-6 items-center">
+                <div className=" tw-flex tw-gap-6 tw-items-center">
                     <Link
                         id="linkedin"
                         href="https://www.linkedin.com/company/mazaal-ai/"
                         aria-label="Explore more on linkedin"
                     >
-                        <FaLinkedin className="fill-black w-6 h-6" />
+                        <FaLinkedin className=" tw-fill-black tw-w-6 tw-h-6" />
                     </Link>
 
                     <Link
@@ -37,48 +37,49 @@ export const Footer: FC<IProps> = () => {
                         href="https://x.com/Mazaal_AI"
                         aria-label="Explore more on twitter"
                     >
-                        <FaTwitter className="fill-black w-6 h-6" />
+                        <FaTwitter className=" tw-fill-black tw-w-6 tw-h-6" />
                     </Link>
                     <Link
                         id="facebook"
                         href="https://www.facebook.com/profile.php?id=100089427944001"
                         aria-label="Explore more on facebook"
                     >
-                        <FaFacebook className="fill-black w-6 h-6" />
+                        <FaFacebook className=" tw-fill-black tw-w-6 tw-h-6" />
                     </Link>
                 </div>
-                <p className="text-sm text-gray-500">
+                <p className=" tw-text-sm tw-text-gray-500">
                     Copyright ©{new Date().getFullYear()}. Mazaal Ai Inc.
                 </p>
             </div>
-            <div className="md:ml-auto flex flex-col md:flex-row items-start md:items-center gap-10">
-                <div className="flex flex-col gap-6 text-black items-start">
-                    <span className="font-semibold">PLATFORM</span>
-                    <Link className="text-gray-900" href="/pricing">
+            <div className="md:tw-ml-auto tw-flex tw-flex-col md:tw-flex-row tw-items-start md:tw-items-center tw-gap-10">
+                tw-{' '}
+                <div className=" tw-flex tw-flex-col tw-gap-6 tw-text-black tw-items-start">
+                    <span className=" tw-font-semibold">PLATFORM</span>
+                    <Link className=" tw-text-gray-900" href="/pricing">
                         Pricing
                     </Link>
                     <Link
-                        className="text-gray-900"
+                        className=" tw-text-gray-900"
                         href="https://docs.mazaal.ai"
                     >
                         Documentation
                     </Link>
                 </div>
-                <div className="flex flex-col gap-6 text-black items-start">
-                    <span className="font-semibold">RESOURCES</span>
-                    <Link className="text-gray-400" href="#">
+                <div className=" tw-flex tw-flex-col tw-gap-6 tw-text-black tw-items-start">
+                    <span className="tw-font-semibold">RESOURCES</span>
+                    <Link className="tw-text-gray-400" href="#">
                         Resource Center
                     </Link>
-                    <Link className="text-gray-900" href="#">
+                    <Link className="tw-text-gray-900" href="/blogs">
                         Blog
                     </Link>
                 </div>
-                <div className="flex flex-col gap-6 text-black items-start">
-                    <span className="font-semibold">COMPANY</span>
-                    <Link className="text-gray-400" href="/about-us">
+                <div className=" tw-flex tw-flex-col tw-gap-6 tw-text-black tw-items-start">
+                    <span className=" tw-font-semibold">COMPANY</span>
+                    <Link className=" tw-text-gray-400" href="/about-us">
                         About Us
                     </Link>
-                    <Link className="text-gray-400" href="/career">
+                    <Link className=" tw-text-gray-400" href="/career">
                         Career
                     </Link>
                 </div>

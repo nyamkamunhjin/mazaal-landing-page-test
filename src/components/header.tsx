@@ -14,7 +14,7 @@ export const Header: FC<IProps> = () => {
     const [opened, setOpened] = useState(false);
     return (
         <>
-            <div className="px-10 py-6 z-10 flex items-center h-20 bg-white text-black">
+            <div className=" tw-px-10 tw-py-6 tw-z-10 tw-flex tw-items-center tw-h-20 tw-bg-white tw-text-black">
                 <Link href="/">
                     <Image
                         src="/images/logo.png"
@@ -24,41 +24,40 @@ export const Header: FC<IProps> = () => {
                         alt="Mazaal AI Logo"
                     />
                 </Link>
-                <div className="hidden md:flex mx-auto gap-4 text-base font-light">
+                <div className=" tw-hidden md:tw-flex tw-mx-auto tw-gap-4 tw-text-base tw-font-light">
                     <Link href="/pricing">Pricing</Link>
                     <Link href="https://docs.mazaal.ai/">Documentation</Link>
-                    <Link href="#">Blog</Link>
+                    <Link href="/blogs">Blog</Link>
                 </div>
                 <Link
-                    className="hidden md:flex text-center px-4 py-2 bg-primary text-white rounded text-sm"
+                    className=" tw-hidden md:tw-flex tw-text-center tw-px-4 tw-py-2 tw-bg-primary tw-text-white tw-rounded tw-text-sm"
                     href="https://beta.mazaal.ai/"
                 >
                     Get Started
                 </Link>
                 <button
                     title="Menu opener"
-                    className="ml-auto md:hidden"
+                    className=" tw-ml-auto md:tw-hidden"
                     onClick={() => setOpened((prev) => !prev)}
                 >
-                    <Bars3Icon className="w-6 h-6 fill-black text-black" />
+                    <Bars3Icon className=" tw-w-6 tw-h-6 tw-fill-black tw-text-black" />
                 </button>
             </div>
             <div
-                className={`md:hidden absolute top-20 shadow-lg bg-white w-full p-4 flex flex-col items-center mx-auto gap-4 text-base font-light transition-all duration-300 text-black ${
-                    opened ? 'translate-y-0' : '-translate-y-[300px]'
+                className={` md:tw-hidden tw-absolute tw-top-20 tw-shadow-lg tw-bg-white tw-w-full tw-p-4 tw-flex tw-flex-col tw-items-center tw-mx-auto tw-gap-4 tw-text-base tw-font-light tw-transition-all tw-duration-300 tw-text-black ${
+                    opened ? 'tw-translate-y-0' : '-tw-translate-y-[300px]'
                 }`}
             >
                 <Link href="/pricing">Pricing</Link>
                 <Link href="https://docs.mazaal.ai/">Documentation</Link>
-                <Link href="#">Blog</Link>
+                <Link href="/blogs">Blog</Link>
                 <Link
-                    className="w-full px-4 py-2 bg-primary text-center text-white rounded text-sm"
+                    className=" tw-w-full tw-px-4 tw-py-2 tw-bg-primary tw-text-center tw-text-white tw-rounded tw-text-sm"
                     href="https://beta.mazaal.ai/"
                 >
                     Get Started
                 </Link>
             </div>
-            /{' '}
         </>
     );
 };

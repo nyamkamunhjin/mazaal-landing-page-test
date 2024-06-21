@@ -32,31 +32,31 @@ const items = [
 
 export const UseCase: FC<IProps> = () => {
     return (
-        <div className="px-10 py-6 flex flex-col gap-6 items-center h-18 border-b border-gray-100">
-            <span className="text-primary text-sm font-semibold">
+        <div className=" tw-px-10 tw-py-6 tw-flex tw-flex-col tw-gap-6 tw-items-center tw-h-18 tw-border-b tw-border-gray-100">
+            <span className=" tw-text-primary tw-text-sm tw-font-semibold">
                 DISCOVER ENDLESS USE CASES
             </span>
-            <h1 className="text-black text-3xl font-medium max-w-lg text-center font-mono tracking-wide">
+            <h1 className=" tw-text-black tw-text-3xl tw-font-medium tw-max-w-lg tw-text-center tw-font-mono tw-tracking-wide">
                 Empowering Industries Worldwide
             </h1>
-            <div className="flex flex-wrap gap-6">
+            <div className=" tw-flex tw-flex-wrap tw-gap-6">
                 {items.map((each) => (
                     <div
-                        className={`flex flex-col gap-3 w-full md:w-52 rounded-lg`}
+                        className={` tw-flex tw-flex-col tw-gap-3 tw-w-full md:tw-w-52 tw-rounded-lg`}
                         key={each.title}
                     >
                         <Image
-                            className="w-full md:w-52 md:h-52 rounded-lg object-cover"
+                            className=" tw-w-full md:tw-w-52 md:tw-h-52 tw-rounded-lg tw-object-cover"
                             width={208}
                             height={208}
                             src={each.image}
                             alt={each.title}
                         />
-                        <div className="flex flex-col gap-2">
-                            <h1 className="text-black font-semibold text-xl lg:text-lg">
+                        <div className=" tw-flex tw-flex-col tw-gap-2">
+                            <h1 className=" tw-text-black tw-font-semibold tw-text-xl lg:tw-text-lg">
                                 {each.title}
                             </h1>
-                            <p className="text-gray-600 text-xl lg:text-base">
+                            <p className=" tw-text-gray-600 tw-text-xl lg:tw-text-base">
                                 {each.description}
                             </p>
                         </div>

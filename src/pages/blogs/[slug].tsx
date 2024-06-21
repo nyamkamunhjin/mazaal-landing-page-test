@@ -1,17 +1,32 @@
 import { NextPage } from 'next';
 import React from 'react';
+import { Layout } from '../../components/layout';
+import { PostData, Posts } from '../../interface';
 
 interface IProps {
-    post: any;
+    post: PostData;
 }
 
-/**
- * @author
- * @function @Blog
- **/
-
 const Blog: NextPage<IProps> = ({ post }) => {
-    return <div className="text-black">{post}</div>;
+    const { title, data, author_name, createdAt } = post.attributes;
+
+    return (
+        <Layout meta={{}}>
+            <article className=" tw-max-w-4xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-py-8 tw-text-black">
+                <h1 className=" tw-text-4xl tw-font-bold tw-mb-4">{title}</h1>
+                <div className="tw-text-gray-500 tw-mb-8">
+                    <p>
+                        {author_name ? `By ${author_name}` : 'Unknown Author'} |{' '}
+                        2024-06-20
+                    </p>
+                </div>
+                <div
+                    className="blog"
+                    dangerouslySetInnerHTML={{ __html: data }}
+                />
+            </article>
+        </Layout>
+    );
 };
 
 export default Blog;
@@ -54,13 +69,13 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
             },
         }
     );
-    const posts = await res.json();
+    const posts: Posts = await res.json();
 
-    console.log({ posts });
+    const post = posts.data[0];
 
     return {
         props: {
-            posts,
+            post,
         },
         // Next.js will attempt to re-generate the page:
         // - When a request comes in

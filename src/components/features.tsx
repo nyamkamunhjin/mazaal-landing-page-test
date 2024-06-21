@@ -5,33 +5,33 @@ interface IProps {}
 
 const items = [
     {
-        className: 'col-span-3',
+        className: 'tw-col-span-3',
         title: 'Truly No-Code',
         description:
             'Combine different models for enhanced capabilities and superior results.',
         image: '/images/features/truly-no-code.avif',
     },
     {
-        className: 'col-span-3',
+        className: 'tw-col-span-3',
         title: 'Drag and Drop',
         description:
             'Drag this drag that and connect them with LLM. Endless possibilites',
         image: '/images/features/drag-n-drop.avif',
     },
     {
-        className: 'col-span-2',
+        className: 'tw-col-span-2',
         title: '100s of ready to use models',
         description: 'Start with pre-built workflows. or build your own',
         image: '/images/features/ready-to-use-models.avif',
     },
     {
-        className: 'col-span-2',
+        className: 'tw-col-span-2',
         title: 'Integrate with the tools you use',
         description: 'Over 200 apps ready to be integrated',
         image: '/images/features/integration-tools.avif',
     },
     {
-        className: 'col-span-2',
+        className: 'tw-col-span-2',
         title: 'Share the workflow in single click',
         description:
             'Automated your boring task? Share it with your colleague, friend or boss in a single click',
@@ -41,15 +41,17 @@ const items = [
 
 export const Features: FC<IProps> = () => {
     return (
-        <div className="md:px-10 py-6 flex flex-col gap-6 items-center h-18 max-w-7xl mx-auto">
-            <span className="text-primary text-sm font-semibold">FEATURES</span>
-            <h1 className="text-black text-3xl font-medium max-w-lg text-center font-mono tracking-wide">
+        <div className="md:tw-px-10 tw-py-6 tw-flex tw-flex-col tw-gap-6 tw-items-center tw-h-18 tw-max-w-7xl tw-mx-auto">
+            <span className=" tw-text-primary tw-text-sm tw-font-semibold">
+                FEATURES
+            </span>
+            <h1 className=" tw-text-black tw-text-3xl tw-font-medium tw-max-w-lg tw-text-center tw-font-mono tw-tracking-wide">
                 Automate Your Business Process by Dragging This and That
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+            <div className=" tw-grid tw-grid-cols-1 md:tw-grid-cols-6 tw-gap-4">
                 {items.map((each) => (
                     <div
-                        className={`flex flex-col rounded-lg bg-white ${each.className}`}
+                        className={` tw-flex tw-flex-col tw-rounded-lg tw-bg-white ${each.className}`}
                         key={each.title}
                     >
                         <Image
@@ -58,11 +60,11 @@ export const Features: FC<IProps> = () => {
                             width={592}
                             height={264}
                         />
-                        <div className="flex flex-col gap-2 p-4">
-                            <h1 className="text-text-primary font-semibold">
+                        <div className=" tw-flex tw-flex-col tw-gap-2 tw-p-4">
+                            <h1 className=" tw-text-text-primary tw-font-semibold">
                                 {each.title}
                             </h1>
-                            <p className="text-text-tertiary">
+                            <p className="tw-text-text-tertiary">
                                 {each.description}
                             </p>
                         </div>

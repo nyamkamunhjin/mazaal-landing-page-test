@@ -15,7 +15,7 @@ const items = [
     {
         title: 'Basic',
         price: '$49/mo',
-        icon: <FlagIcon className="w-10 h-10 text-primary" />,
+        icon: <FlagIcon className="tw-w-10 tw-h-10 tw-text-primary" />,
         included: [
             '1000 credits',
             '1 project / 1 user',
@@ -27,7 +27,7 @@ const items = [
     {
         title: 'Pro',
         price: '$499/mo',
-        icon: <BoltIcon className="w-10 h-10 text-primary" />,
+        icon: <BoltIcon className="tw-w-10 tw-h-10 tw-text-primary" />,
         selected: true,
         included: [
             '5000 credits',
@@ -41,7 +41,9 @@ const items = [
     {
         title: 'Enterprise',
         price: 'Custom',
-        icon: <BuildingOfficeIcon className="w-10 h-10 text-primary" />,
+        icon: (
+            <BuildingOfficeIcon className="tw-w-10 tw-h-10 tw-text-primary" />
+        ),
         included: [
             'Unlimited credits',
             'Role-Based access',
@@ -55,62 +57,64 @@ const items = [
 
 export const Pricing: FC<IProps> = () => {
     return (
-        <div className="md:px-10 py-6 flex flex-col gap-6 items-center h-18 w-full max-w-screen-lg mx-auto p-4">
-            <div className="flex flex-col gap-4 items-start max-w-xl mr-auto mb-6">
-                <span className="text-primary text-start text-sm font-semibold">
+        <div className="md:tw-px-10 tw-py-6 tw-flex tw-flex-col tw-gap-6 tw-items-center tw-h-18 tw-w-full tw-max-w-screen-lg tw-mx-auto tw-p-4">
+            <div className=" tw-flex tw-flex-col tw-gap-4 tw-items-start tw-max-w-xl tw-mr-auto tw-mb-6">
+                <span className=" tw-text-primary tw-text-start tw-text-sm tw-font-semibold">
                     CHOOSE YOUR PATH TO AI SUCCESS
                 </span>
-                <h1 className="text-black text-3xl font-medium max-w-lg text-start font-mono">
+                <h1 className=" tw-text-black tw-text-3xl tw-font-medium tw-max-w-lg tw-text-start tw-font-mono">
                     Flexible Plans for Every Business Need
                 </h1>
-                <p className="text-gray-500">
+                <p className="tw-text-gray-500">
                     Discover our range of affordable, scalable pricing plans
                     designed to fit businesses of all sizes and stages. Start
                     your AI journey with Mazaal AI today
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-4">
+            <div className=" tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-w-full tw-gap-4">
                 {items.map((each) => (
                     <div
-                        className={`flex flex-col relative rounded-lg p-5 ${
+                        className={` tw-flex tw-flex-col tw-relative tw-rounded-lg tw-p-5 ${
                             each.selected
-                                ? 'bg-white border border-primary'
-                                : 'bg-gray-50'
+                                ? ' tw-bg-white tw-border tw-border-primary'
+                                : ' tw-bg-gray-50'
                         }`}
                         key={each.title}
                     >
                         {each.selected ? (
-                            <span className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full px-4 py-1 text-[11px] font-medium bg-primary">
+                            <span className=" tw-absolute tw-top-0 -tw-translate-y-1/2 tw-left-1/2 -tw-translate-x-1/2 tw-rounded-full tw-px-4 tw-py-1 tw-text-[11px] tw-font-medium tw-bg-primary">
                                 Most Popular
                             </span>
                         ) : null}
-                        <div className="flex flex-col gap-4 border-b">
+                        <div className=" tw-flex tw-flex-col tw-gap-4 tw-border-b">
                             {each.icon}
-                            <h1 className="text-black text-lg font-semibold">
+                            <h1 className=" tw-text-black tw-text-lg tw-font-semibold">
                                 {each.title}
                             </h1>
-                            <p className="text-black text-3xl font-medium">
+                            <p className=" tw-text-black tw-text-3xl tw-font-medium">
                                 {each.price}
                             </p>
                             <Link
                                 href="https://beta.mazaal.ai"
-                                className="px-4 py-2 bg-primary text-white rounded text-sm w-full"
+                                className=" tw-px-4 tw-py-2 tw-bg-primary tw-text-white tw-rounded tw-text-sm tw-w-full"
                             >
                                 Get started
                             </Link>
                         </div>
-                        <div className="flex flex-col gap-3 border-t mt-5 py-5">
-                            <span className="text-black text-xs font-medium mb-">
+                        <div className=" tw-flex tw-flex-col tw-gap-3 tw-border-t tw-mt-5 tw-py-5">
+                            <span className=" tw-text-black tw-text-xs tw-font-medium">
                                 WHAT'S INCLUDED...
                             </span>
                             {each.included.map((item) => (
                                 <div
-                                    className="flex gap-2 items-center text-xs"
+                                    className=" tw-flex tw-gap-2 tw-items-center tw-text-xs"
                                     key={item}
                                 >
-                                    <ArrowRightCircleIcon className="w-4 h-4 text-primary" />{' '}
-                                    <span className="text-black">{item}</span>
+                                    <ArrowRightCircleIcon className=" tw-w-4 tw-h-4 tw-text-primary" />{' '}
+                                    <span className="tw-text-black">
+                                        {item}
+                                    </span>
                                 </div>
                             ))}
                         </div>

@@ -16,32 +16,32 @@ export const Hero: FC<IProps> = () => {
     const [showVideo, setShowVideo] = useState(false);
 
     return (
-        <div className="px-4 py-6 flex flex-col gap-10 max-w-5xl items-center h-18 mx-auto">
-            <div className="flex flex-col gap-10 max-w-3xl">
-                <h1 className="text-5xl font-medium text-black text-center font-mono">
+        <div className=" tw-px-4 tw-py-6 tw-flex tw-flex-col tw-gap-10 tw-max-w-5xl tw-items-center tw-h-18 tw-mx-auto">
+            <div className=" tw-flex tw-flex-col tw-gap-10 tw-max-w-3xl">
+                <h1 className=" tw-text-5xl tw-font-medium tw-text-black tw-text-center tw-font-mono">
                     AI workflow for Everyday Efficiency
                 </h1>
-                <p className="text-gray-400 text-center text-base">
+                <p className=" tw-text-gray-400 tw-text-center tw-text-base">
                     Empower your daily tasks with intuitive AI — customize,
                     train, and automate effortlessly, no coding required.
                 </p>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className=" tw-flex tw-gap-4 tw-items-center">
                 <Link
-                    className="px-4 py-2 bg-primary rounded text-sm"
+                    className=" tw-px-4 tw-py-2 tw-bg-primary tw-rounded tw-text-sm"
                     href="https://beta.mazaal.ai/"
                 >
                     Get Started
                 </Link>
-                <button className="text-gray-400">Book a Demo</button>
+                <button className="tw-text-gray-400">Book a Demo</button>
             </div>
             {!showVideo ? (
                 <motion.div
-                    className={`relative w-full md:h-[350px] rounded-xl overflow-hidden ${
-                        !showVideo ? 'block' : 'hidden'
+                    className={` tw-relative tw-w-full md:tw-h-[350px] tw-rounded-xl tw-overflow-hidden tw-${
+                        !showVideo ? 'tw-block' : 'tw-hidden'
                     }`}
                 >
-                    <div className="w-full h-full bg-gradient-to-b from-transparent to-white absolute" />
+                    <div className=" tw-w-full tw-h-full tw-bg-gradient-to-b tw-from-transparent tw-to-white tw-absolute" />
                     <Image
                         width={992}
                         height={350}
@@ -50,15 +50,16 @@ export const Hero: FC<IProps> = () => {
                         alt="Mazaal Demo Video"
                     />
                     <button
-                        className="bg-black rounded-full p-4 text-sm flex items-center gap-2 backdrop-filter backdrop-blur-md bg-opacity-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-nowrap font-semibold hover:scale-110 transition-all"
+                        className=" tw-bg-black tw-rounded-full tw-p-4 tw-text-sm tw-flex tw-items-center tw-gap-2 tw-backdrop-filter tw-backdrop-blur-md tw-bg-opacity-20 tw-absolute tw-top-1/2 tw-left-1/2 -tw-translate-x-1/2 -tw-translate-y-1/2 tw-text-nowrap tw-font-semibold hover:tw-scale-110 tw-transition-all"
                         onClick={() => setShowVideo(true)}
                     >
-                        <PlayIcon className="w-4 h-4" /> Watch Mazaal AI Demo
+                        <PlayIcon className=" tw-w-4 tw-h-4" /> Watch Mazaal AI
+                        Demo
                     </button>
                 </motion.div>
             ) : (
                 <div
-                    className={`${showVideo ? 'block' : 'hidden'}`}
+                    className={`${showVideo ? 'tw-block' : 'tw-hidden'}`}
                     style={{
                         position: 'relative',
                         paddingBottom: '82.19178082191782%',

@@ -17,15 +17,15 @@ const items = [
 
 export const TrustedBy: FC<IProps> = () => {
     return (
-        <div className="px-10 py-6 flex flex-col gap-6 items-center h-18 max-w-7xl mx-auto">
-            <h1 className="text-black text-lg font-bold max-w-lg text-center">
+        <div className=" tw-px-10 tw-py-6 tw-flex tw-flex-col tw-gap-6 tw-items-center tw-h-18 tw-max-w-7xl tw-mx-auto">
+            <h1 className=" tw-text-black tw-text-lg tw-font-bold tw-max-w-lg tw-text-center">
                 Trusted by
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 place-content-center gap-12">
+            <div className=" tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-place-content-center tw-gap-12">
                 {items.map((each) => (
                     <Image
                         key={each.image}
-                        className="object-contain m-auto"
+                        className=" tw-object-contain tw-m-auto"
                         width={160}
                         height={160}
                         src={each.image}
