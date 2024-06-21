@@ -8,10 +8,18 @@ interface IProps {
 }
 
 const Blog: NextPage<IProps> = ({ post }) => {
-    const { title, data, author_name, createdAt } = post.attributes;
+    const { title, data, author_name, slug } = post.attributes;
 
     return (
-        <Layout meta={{}}>
+        <Layout
+            meta={{
+                title,
+                description: data.slice(0, 100),
+                image: '',
+                keywords: title,
+                url: `${process.env.URL}/blogs/${slug}`,
+            }}
+        >
             <article className=" tw-max-w-4xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-py-8 tw-text-black">
                 <h1 className=" tw-text-4xl tw-font-bold tw-mb-4">{title}</h1>
                 <div className="tw-text-gray-500 tw-mb-8">
