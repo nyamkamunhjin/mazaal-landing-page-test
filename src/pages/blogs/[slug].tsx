@@ -6,6 +6,7 @@ import { load } from 'cheerio';
 import moment from 'moment';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 interface IProps {
     post: PostData;
     tableOfContents: { id: string; text: string }[];
@@ -20,7 +21,8 @@ const BlogSlugPage: NextPage<IProps> = ({ post, tableOfContents }) => {
         setCurrentHash(hash);
     }, [router.asPath]);
 
-    const { title, data, author_name, slug, createdAt } = post.attributes;
+    const { title, data, author_name, slug, createdAt, author_avatar } =
+        post.attributes;
 
     return (
         <Layout
@@ -32,20 +34,34 @@ const BlogSlugPage: NextPage<IProps> = ({ post, tableOfContents }) => {
                 url: `${process.env.URL}/blogs/${slug}`,
             }}
         >
-            <article className=" tw-max-w-5xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-py-8 tw-text-black">
+            <article className="tw-max-w-4xl tw-mx-auto tw-px-4 tw-py-8 tw-text-black tw-flex tw-flex-col tw-gap-2">
                 <h1 className=" tw-text-4xl tw-font-bold tw-mb-4">{title}</h1>
-                <div className="tw-text-gray-500 tw-mb-8">
-                    <p>
-                        {author_name ? `${author_name}` : 'Unknown Author'} |{' '}
-                        {moment(createdAt).format('YYYY/MM/DD')}
-                    </p>
-                </div>
-                <div className="tw-relative tw-overflow-clip tw-flex tw-gap-2">
+                <span className="tw-text-black tw-text-sm">
+                    {moment(createdAt).format('MMMM DD, YYYY')} {}
+                </span>
+                <div className="tw-relative tw-flex tw-flex-col-reverse lg:tw-flex-row tw-gap-10">
                     <div
-                        className="blog"
+                        className="blog tw-max-w-3xl tw-w-full"
                         dangerouslySetInnerHTML={{ __html: data }}
                     />
-                    <div className="tw-flex tw-flex-col tw-gap-4 tw-min-w-[200px] tw-w-full tw-px-4 tw-text-sm">
+                    <div className="tw-flex tw-flex-col tw-gap-1 tw-min-w-[200px] tw-w-full tw-px-0 tw-text-sm tw-mt-2">
+                        <div className="tw-text-gray-500 tw-flex tw-gap-2 tw-items-center">
+                            <Image
+                                className="tw-rounded-full tw-w-10 tw-h-10 tw-object-cover"
+                                src={
+                                    author_avatar.data.attributes.formats
+                                        .thumbnail.url
+                                }
+                                width={150}
+                                height={150}
+                                alt={author_name}
+                            />
+                            <p>
+                                {author_name
+                                    ? `${author_name}`
+                                    : 'Unknown Author'}
+                            </p>
+                        </div>
                         <div className="tw-sticky tw-top-0 tw-flex tw-flex-col tw-gap-2">
                             <h6 className="tw-border-b tw-border-primary tw-py-4">
                                 TABLE OF CONTENTS
@@ -99,7 +115,7 @@ export async function getStaticPaths() {
 // revalidation is enabled and a new request comes in
 export async function getStaticProps({ params }: { params: { slug: string } }) {
     const res = await fetch(
-        `${process.env.STRAPI_HOST}/api/blogs?filters[slug][$eq]=${params.slug}`,
+        `${process.env.STRAPI_HOST}/api/blogs?filters[slug][$eq]=${params.slug}&populate=author_avatar`,
         {
             headers: {
                 Authorization: `Bearer ${process.env.STRAPI_API_KEY}`,
